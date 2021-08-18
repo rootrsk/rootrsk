@@ -1,0 +1,11 @@
+https://i.ibb.co/M5BXRrp/react.png
+https://i.ibb.co/VCyjBd1/python.png
+https://i.ibb.co/5R7Cphk/html.png
+https://i.ibb.co/KhdmC4v/css.png
+https://i.ibb.co/kJDvCD8/sass.png
+https://i.ibb.co/JpbTPhd/redux.png
+https://i.ibb.co/P48hr8G/socket.png
+https://i.ibb.co/SxzkQXV/java.png
+https://i.ibb.co/GJ45zXp/javascript.png
+https://i.ibb.co/FVkT2hB/mongodb.png
+https://i.ibb.co/YccPz3s/c.png
