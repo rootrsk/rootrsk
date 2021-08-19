@@ -279,6 +279,7 @@ body{
     color: #ffffff;
     animation: pulse 1s linear 2500ms;
     position: relative;
+    cursor: pointer;
     // box-shadow: -1px 2px 1px ;
     // filter: blur(1px);
     // animation: name duration timing-function delay iteration-count direction fill-mode;
@@ -307,21 +308,27 @@ body{
 .footer{
     height: 100vh;
     min-width: 100%;
-    background: #474545;
-    animation: slideInDown 500ms;
+    background: #ffffff;
+    // animation: slideInDown 500ms;
     position: relative;
+    
     .get-in-touch{
         position: relative;
         .form-div{
             width: 80%;
             margin: auto;
             background: #ffffff;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.13);
+            
             position: absolute;
             left: 0;
             right: 0;
-            top: 20px;
+            top: 30px;
             z-index: 1;
             font-family: Spectral SC;
+            border-radius: 2px;
+            animation: fadeInDown 2s;
             h2{
                 font-family: Spectral SC;
                 text-align: center;
@@ -339,13 +346,18 @@ body{
                     border: none;
                     margin: 7px 0px;
                     border-radius: 2px;
-                    border: 1px solid #636262;
+                    border: 1px solid #a0a0a0;
+                    resize: none;
                     
                 } 
                 button{
                     padding: 10px 30px;
                     margin-bottom: 20px;
                     font-family: Spectral SC;
+                    background: transparent;
+                    outline: none;
+                    border-radius: 2px;
+                    border: 1px solid #a0a0a0;
                 }
                 
             } 
@@ -358,15 +370,18 @@ body{
     width: 100%;
     position: absolute;
     bottom: 0px;
-    background: #000000;
+    background: #0f333a;
+    // background: #00b4ff;
     height: 60vh;
     color: #ffffff;
-    
-    
-    
+    animation: fadeInUp 2s;
 }
 .contacts {
     margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    animation: fadeInUpBig 2s both;
+    width: 100%;
     p{
         font-family: 'Work Sans', sans-serif;
         letter-spacing: 1px;
@@ -382,18 +397,21 @@ body{
     min-height: 100vh;
     width: 100%;
     animation: slideInUp 500ms;
-    .skill-header {
-        width: 100%;
-        padding: 10px 20px;
-        background: #ffffffee;
-        font-family: 'Spectral SC'
-    }
+    // background: #0f2222;
+    
+}
+.skill-header {
+    width: 100%;
+    padding: 10px 20px;
+    // background: #ffffffee;
+    font-family: 'Spectral SC';
+    text-align: center;
 }
 .skills-container{
-    
     display: flex;
     flex-wrap: wrap;
     width: 90%;
+    max-width: 1400px;
     margin: auto;
     margin-top: 20px;
     justify-content: space-around;
@@ -821,4 +839,163 @@ body{
     border: none;
     cursor: pointer;
 }
+.abs-buttons {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    button{
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        background-color: #ffffff;
+        cursor: pointer;
+        margin-top: 10px;
+        border: 1px solid #eeeeee;
+        box-shadow: 1px 1px 5px #949494;
+        font-family: 'Work Sans', cursive;
+        transition: all 1s;
+        svg,img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    button:hover{
+        transform: scale(1.2);
+    }
+}
+.bubble-container{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    // background: red;
+    border-radius: 50%;
+    transition: transform 2s;
+    cursor: pointer;
+    
 
+}
+.bubble-icon{
+    font-size: 50px;
+    color: #fdfdfd;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    display: grid;
+    transform: translate(-50%,50%);
+    // background: red;
+}
+.bubble {
+    border-radius: 50%;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+    height: 200px;
+    position: absolute;
+    width: 200px;
+    // background: blue;
+}
+
+.bubble:after {
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+
+    box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+
+    content: "";
+    height: 180px;
+    left: 10px;
+    position: absolute;
+    width: 180px;
+}
+
+@keyframes animateBubble {
+    0% {
+        margin-top: -10%;
+    }
+
+    100% {
+        margin-top: 0%;
+    }
+}
+.x1 {
+    animation: animateBubble 10s linear infinite alternate;
+    top: 5%;
+    transform: scale(0.6);
+}
+
+.x2 {
+    
+    animation: animateBubble 7s linear infinite alternate;
+    
+    top: 80%;
+    transform: scale(0.4);
+}
+
+.x3 {
+    animation: animateBubble 12s linear infinite alternate;
+    
+    top: 40%;
+    transform: scale(0.7);
+}
+
+.x4 {
+    animation: animateBubble 5s linear infinite alternate;
+    
+    top: 0;
+    transform: scale(0.3);
+}
+
+.x5 {
+    animation: animateBubble 11s linear infinite alternate;
+    
+    top: 50%;
+    transform: scale(0.5);
+}
+
+.x6 {
+    animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    top: 0;
+    transform: scale(0.8);
+}
+
+.x7 {
+    animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 65%;
+    top: 70%;
+    transform: scale(0.4);
+}
+
+.x8 {
+    animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+
+    left: 80%;
+    top: 10%;
+
+    transform: scale(0.3);
+}
+
+.x9 {
+    animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    left: 90%;
+    top: 50%;
+
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    transform: scale(0.6);
+}
+
+.x10 {
+    animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 80%;
+    top: 80%;
+    transform: scale(0.3);
+}

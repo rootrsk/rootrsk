@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SkillCard({name,color,img,background,clsName}) {
+function SkillCard({name,color,img,background,clsName,link}) {
     console.log(background)
     return (
         <div className={`skill-card ${clsName}`} style={{background:background}}  >
@@ -17,7 +17,7 @@ function SkillCard({name,color,img,background,clsName}) {
                 </div>
             </div>
             <div className='card_button'>
-                <button className='learn-more' style={{background:color}}>Learn More</button>
+                <button className='learn-more' style={{background:color}} onClick={()=>window.open(link)}>Learn More</button>
             </div>
         </div>
     )
