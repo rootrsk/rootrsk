@@ -8,7 +8,12 @@ function Project() {
             </div>
             <div className="markup_container">
                 <div className="markup-div fl">
-                    <img src="https://i.ibb.co/bP0Qz6w/Frame-1.png" alt="" />
+                    <div className='image-container'>
+                        <img src="https://i.ibb.co/bP0Qz6w/Frame-1.png" alt="" />
+                        <div className='abs-title'>
+                            <h2>Carrier Will</h2>
+                        </div>
+                    </div>
                     <div className="project-details">
                         <h2>Cadrewill- Course Selling Web App</h2>
                         <p>The main objective is to provide users, a fully functional education platform to prepare for various exams and interviews. </p>
@@ -28,13 +33,21 @@ function Project() {
                             <li>Mongodb</li>
                             <li>Razorpay</li>
                         </ul>
-                        <button>Github</button>
+                        <div className="flex-box_center">
+                            <button className='btm-btn'>Github</button>
+                        </div>
                     </div>
                     {/* <img src="https://i.ibb.co/jVV02Jm/Frame-2.png" alt="" /> */}
                     {/* <img src="https://i.ibb.co/XS1SRgx/X-1.png" alt="" /> */}
                 </div>
                 <div className="markup-div fu">
-                    <img src="https://i.ibb.co/bP0Qz6w/Frame-1.png" alt="" />
+                    <div className='image-container'>
+                        <img src="https://i.ibb.co/QrqDN9c/home-Automation.png" alt="" />
+                        <div className='abs-title'>
+                            <h2>Home Automation</h2>
+                        </div>
+                    </div>
+                    
                     <div className="project-details">
                         <h2>HomeAutomation -  Mobile & Web App</h2>
                         
@@ -57,18 +70,29 @@ function Project() {
                             <li>React Native</li>
                             <li>Web Sockets</li>
                         </ul>
-                        <button>Github</button>
+                        <div className="flex-box_center">
+                            <button className='btm-btn'>Github</button>
+                        </div>
                     </div>
                 </div>
                 <div className="markup-div fr">
-                    <img src="https://i.ibb.co/bP0Qz6w/Frame-1.png" alt="" />
+                    
+                    <div className='image-container'>
+                        <img src="https://i.ibb.co/bP0Qz6w/Frame-1.png" alt="" />
+                        <div className='abs-title' style={{background:'#000000'}}>
+                            <h2 style={{color:'#ffffff'}}>Working...</h2>
+                        </div>
+                    </div>
                     <div className="project-details">
                         <h2>TestHunt - Test Series Web App</h2>
-                        <ul>
+                        {/* <ul>
                             <li></li>
                             <li>Monthaly, Yearly performance, accuray and other statics are available.</li>
-                        </ul>
-                        <button>Github</button>
+                        </ul> */}
+                        <div className="flex-box_center">
+                            <button className='btm-btn'>Github</button>
+                        </div>
+                        
                     </div>
                 </div>
                 

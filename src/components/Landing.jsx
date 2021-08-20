@@ -21,7 +21,7 @@ function Landing() {
                 </div>
 
                 <div className='flex-box_between profile-container'>
-                    <img src="https://i.ibb.co/NxLvkPc/pngwing-com-9.png" alt="" />
+                    {/* <img src="https://i.ibb.co/NxLvkPc/pngwing-com-9.png" alt="" /> */}
                 </div>
             </div>
 
