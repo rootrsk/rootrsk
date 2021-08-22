@@ -34,7 +34,7 @@ function Project() {
                             <li>Razorpay</li>
                         </ul>
                         <div className="flex-box_center">
-                            <button className='btm-btn'>Github</button>
+                            <button className='btm-btn' onClick={()=>window.open('https://github.com/rootrsk')}>Github</button>
                         </div>
                     </div>
                     {/* <img src="https://i.ibb.co/jVV02Jm/Frame-2.png" alt="" /> */}
@@ -71,7 +71,7 @@ function Project() {
                             <li>Web Sockets</li>
                         </ul>
                         <div className="flex-box_center">
-                            <button className='btm-btn'>Github</button>
+                            <button className='btm-btn' onClick={()=>window.open('https://github.com/rootrsk')}>Github</button>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@ function Project() {
                             <li>Monthaly, Yearly performance, accuray and other statics are available.</li>
                         </ul> */}
                         <div className="flex-box_center">
-                            <button className='btm-btn'>Github</button>
+                            <button className='btm-btn' onClick={()=>window.open('https://github.com/rootrsk')}>Github</button>
                         </div>
                         
                     </div>
