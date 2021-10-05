@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Trade+Winds&family=Work+Sans:ital,wght@0,200;0,300;1,300&display=swap");
 :root {
   --p-bg:#ffffff;
-  --s-bg: #dde5f1;
+  --s-bg: #142c50;
   --p-c: #000000;
   --s-c: #ffffff;
 }
@@ -17,10 +17,71 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background: var(--s-bg);
+}
+
 .logo {
   font-family: 'Trade Winds', cursive;
   color: #000000;
   padding: 5px 10px;
+  width: 80px;
+  margin-left: 10px;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: center;
+}
+
+.nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-link li {
+  margin: 5px 20px;
+  list-style-type: none;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.2rem;
+  position: relative;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-link li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-link li::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #fff;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+  -webkit-box-shadow: 0px -2px 15px #fff;
+          box-shadow: 0px -2px 15px #fff;
+}
+
+.nav-link li:hover::after {
+  content: '';
+  width: 70%;
+  height: 3px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .home-page {
@@ -65,8 +126,39 @@ html {
           animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
+.welcome-div .welcome-note .hi {
+  font-size: 30px;
+  font-family: 'Spectral SC',serif;
+  color: #fff;
+}
+
 .welcome-div .welcome-note .name {
   letter-spacing: .12em;
+  -webkit-text-stroke: 1px #ffffff;
+  color: transparent;
+  font-size: 70px;
+  background: url("../assets/icons/back.png");
+  background-position: 0 0;
+  background-clip: text;
+  -webkit-animation: back 20s linear infinite;
+          animation: back 20s linear infinite;
+}
+
+.welcome-div .welcome-note .sc {
+  font-family: 'Spectral SC',serif;
+  color: #fff;
+}
+
+@-webkit-keyframes back {
+  100% {
+    background-position: 2000px 0px;
+  }
+}
+
+@keyframes back {
+  100% {
+    background-position: 2000px 0px;
+  }
 }
 
 .flex-box {
@@ -101,10 +193,6 @@ html {
       justify-content: space-around;
 }
 
-.sc {
-  font-family: 'Spectral SC', serif;
-}
-
 .ws {
   font-family: 'Work Sans', sans-serif;
 }
@@ -121,19 +209,38 @@ html {
 }
 
 .cv-btn {
-  padding: 10px 20px;
+  padding: 12px 25px;
   cursor: pointer;
   font-size: 1.1rem;
   margin-top: 40px;
-  background: #2B3547;
+  background: transparent;
   color: #ffffff;
-  border-radius: 4px;
   border: none;
   outline: none;
   position: relative;
   z-index: 2;
+  border: 1px solid white;
   -webkit-animation: shadow-drop-2-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
           animation: shadow-drop-2-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.cv-div {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 4px;
 }
 
 .profile-container {
@@ -152,14 +259,17 @@ html {
   bottom: 0px;
   left: 0px;
   right: 0px;
-  width: 70%;
+  width: 100%;
   z-index: 100;
+  border-bottom: 5px solid #ffffff;
 }
 
 .skill-animation .bar {
   width: 20px;
   background: #ffffff;
   margin: auto;
+  -webkit-box-shadow: 0px 0px 2px 1px #ffffff;
+          box-shadow: 0px 0px 2px 1px #ffffff;
 }
 
 .skill-animation img {
@@ -173,9 +283,8 @@ html {
   border-radius: 7px;
   padding-top: 15px;
   margin: 10px;
-  -webkit-animation: bounce-in-bottom 2s both;
-          animation: bounce-in-bottom 2s both;
-  position: relative;
+  -webkit-animation: fadeInLeft 2s;
+          animation: fadeInLeft 2s;
 }
 
 .skill-img_container {
@@ -213,7 +322,6 @@ html {
 }
 
 .progress-bar_container .progress-fill {
-  width: 60%;
   background: blue;
   position: absolute;
   height: 7px;
@@ -221,6 +329,66 @@ html {
   border-radius: 7px;
   -webkit-animation: fill 2s;
           animation: fill 2s;
+}
+
+.progress-bar_container .react_fill {
+  max-width: 70%;
+  width: 70%;
+}
+
+.progress-bar_container .node_fill {
+  max-width: 65%;
+  width: 65%;
+}
+
+.progress-bar_container .mongo_fill {
+  width: 60%;
+  max-width: 60%;
+}
+
+.progress-bar_container .redux_fill {
+  width: 72%;
+  max-width: 72%;
+}
+
+.progress-bar_container .socket_fill {
+  width: 50%;
+  max-width: 50%;
+}
+
+.progress-bar_container .java_fill {
+  width: 50%;
+  max-width: 50%;
+}
+
+.progress-bar_container .python_fill {
+  width: 40%;
+  max-width: 40%;
+}
+
+.progress-bar_container .c_fill {
+  width: 50%;
+  max-width: 50%;
+}
+
+.progress-bar_container .html_fill {
+  width: 76%;
+  max-width: 76%;
+}
+
+.progress-bar_container .css_fill {
+  width: 76%;
+  max-width: 76%;
+}
+
+.progress-bar_container .sass_fill {
+  width: 50%;
+  max-width: 50%;
+}
+
+.progress-bar_container .figma_fill {
+  width: 70%;
+  max-width: 70%;
 }
 
 .card_button {
@@ -270,7 +438,6 @@ html {
 .footer {
   height: 100vh;
   min-width: 100%;
-  background: #ffffff;
   position: relative;
 }
 
@@ -281,8 +448,8 @@ html {
 .footer .get-in-touch .form-div {
   width: 80%;
   margin: auto;
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
+  background: #012125;
+  border: 1px solid #1f1b1b;
   -webkit-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.13);
           box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.13);
   position: absolute;
@@ -292,8 +459,9 @@ html {
   z-index: 1;
   font-family: Spectral SC;
   border-radius: 2px;
-  -webkit-animation: fadeInDown 2s;
-          animation: fadeInDown 2s;
+  -webkit-animation: fadeInLeft 2s;
+          animation: fadeInLeft 2s;
+  color: #ffffff;
 }
 
 .footer .get-in-touch .form-div h2 {
@@ -314,8 +482,10 @@ html {
   border: none;
   margin: 7px 0px;
   border-radius: 2px;
-  border: 1px solid #a0a0a0;
+  border: 1px solid #616161;
   resize: none;
+  background: #012125;
+  color: inherit;
 }
 
 .footer .get-in-touch .form-div form button {
@@ -325,7 +495,9 @@ html {
   background: transparent;
   outline: none;
   border-radius: 2px;
+  color: inherit;
   border: 1px solid #a0a0a0;
+  background-color: #012125;
 }
 
 .socila-media_container {
@@ -589,7 +761,7 @@ html {
     width: 0%;
   }
   to {
-    width: 60%;
+    width: 80%;
   }
 }
 
@@ -598,7 +770,7 @@ html {
     width: 0%;
   }
   to {
-    width: 60%;
+    width: 80%;
   }
 }
 
@@ -1339,6 +1511,10 @@ html {
           transform: scale(0.3);
 }
 
+h2 {
+  color: #ffffff;
+}
+
 .markup_container {
   width: 95%;
   margin: auto;
@@ -1348,33 +1524,39 @@ html {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   position: relative;
+  color: #fff;
 }
 
 .markup_container .markup-div {
   margin: 10px;
-  border: 1px solid #b6b6b6;
   font-family: 'Work Sans', sans-serif;
   width: calc(33% - 20px);
   position: relative;
-  -webkit-box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.425);
-          box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.425);
   padding: 5px;
   padding-bottom: 30px;
+  background: rgba(33, 98, 175, 0.26);
 }
 
 .markup_container .markup-div ul, .markup_container .markup-div li {
   margin-left: 15px;
-  color: #2b2b2bd8;
 }
 
 .markup_container .markup-div h2 {
   text-align: center;
   margin: 5px;
   padding: 5px;
+  color: #00ccff;
 }
 
 .markup_container .markup-div h4 {
   margin: 5px;
+}
+
+.markup_container .markup-div .small-line {
+  border-bottom: 5px solid #0bbaff;
+  width: 100px;
+  margin: auto;
+  margin-bottom: 15px;
 }
 
 .markup_container .markup-div button {
@@ -1388,7 +1570,7 @@ html {
 .markup_container .markup-div p {
   margin: 5px;
   font-weight: 600;
-  color: #474747;
+  text-align: justify;
 }
 
 .markup_container .fl {
@@ -1419,7 +1601,7 @@ html {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: #5f0b8098;
+  background: #034a57b4;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -1474,12 +1656,12 @@ html {
   height: 100vh;
   width: 100%;
   color: #161616;
-  background: #fcfcfc;
 }
 
 .about_page h1 {
   text-align: center;
   margin: 5px;
+  color: #fff;
 }
 
 .about_page h2 {
@@ -1493,6 +1675,7 @@ html {
   max-width: 1600px;
   margin-top: 20px;
   place-items: center;
+  color: #c7c7c7;
   border-radius: 7px;
   margin-bottom: 20px;
 }
@@ -1506,6 +1689,7 @@ html {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin: 5px 0px;
+  color: #c7c7c7;
 }
 
 .about_page .about_upper .it-flex p {
@@ -1519,13 +1703,17 @@ html {
 
 .about_page .about-edu {
   padding: 10px;
-  -webkit-animation: rollIn 2s;
-          animation: rollIn 2s;
+  -webkit-animation: fadeInUp 2s;
+          animation: fadeInUp 2s;
   margin: auto;
   max-width: 1600px;
-  -webkit-box-shadow: 0px 0px 1px .5px #c5c5c5, 0px 0px 2px 2px #d6d6d6;
-          box-shadow: 0px 0px 1px .5px #c5c5c5, 0px 0px 2px 2px #d6d6d6;
+  width: 95%;
+  color: #c7c7c7;
+  -webkit-box-shadow: 0px 0px 1px .5px #021f49, 0px 0px 2px 2px #041a3b;
+          box-shadow: 0px 0px 1px .5px #021f49, 0px 0px 2px 2px #041a3b;
   margin-top: 10px;
+  background: rgba(33, 98, 175, 0.26);
+  background: rgba(95, 58, 51, 0.23);
 }
 
 .about_page .about-edu h4 {
@@ -1554,14 +1742,17 @@ html {
 .about_page .cake p {
   font-size: 20px;
   margin-top: 10px;
+  color: #ffffff;
 }
 
 .about_page .cake img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: url("https://pa1.narvii.com/7839/492c3f057b6e491a024599369feb0a341eb4c08cr1-200-200_hq.gif");
   background-size: cover;
+  border: 1px solid #fc7507;
+  -webkit-animation: filter-animation 5s infinite;
+          animation: filter-animation 5s infinite;
 }
 
 .about_page .quote {
@@ -1571,6 +1762,7 @@ html {
   margin-top: 50px;
   -webkit-animation: zoomIn 2s;
           animation: zoomIn 2s;
+  color: #e4e4e4;
 }
 
 .about_page .quote span {
@@ -1578,6 +1770,36 @@ html {
   font-weight: 700;
   font-style: italic;
   letter-spacing: 1px;
+}
+
+@-webkit-keyframes filter-animation {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  50% {
+    -webkit-filter: hue-rotate(100deg);
+            filter: hue-rotate(100deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+}
+
+@keyframes filter-animation {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  50% {
+    -webkit-filter: hue-rotate(100deg);
+            filter: hue-rotate(100deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
 }
 
 .divider {

@@ -48,7 +48,7 @@ function App() {
 			<Skill />
 			<Footer /> */}
 			{/* <button className='abs-button' onClick={buttonHandler}>Next</button> */}
-			<div className='abs-buttons'>
+			{/* <div className='abs-buttons'>
 				
 				<button onClick={()=>buttonHandler('contacts')} className>
 					<img src={contactIcon} alt='ContactPage' />
@@ -66,7 +66,7 @@ function App() {
 					<img src={HomeIcon} alt="Homepage" />
 				</button>
 				
-			</div>
+			</div> */}
 		</div>
     );  
 }
