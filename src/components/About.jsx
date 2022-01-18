@@ -28,7 +28,7 @@ function About() {
                             <p>Strong in design and integration with intuitive problem-solving skills. Proficient in Web Technology. Passionate about implementing and launching new projects. Ability to translate business requirements into technical solutions. Looking to start the career as an entry-level software engineer with a reputed firm driven by technology.</p>
                         </div>
                     </div>
-                    <div className=''>
+                    <div className='profile-pic'>
                         <div className='bubble-img' style={{background:'rgb(0,0,0,.02)'}}></div>
                         <img src="https://i.ibb.co/r3mMjcb/IMG20200826131702-2.jpg" alt="" />
                     </div>

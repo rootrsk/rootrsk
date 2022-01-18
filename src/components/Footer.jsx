@@ -6,6 +6,7 @@ import { AiFillGithub } from 'react-icons/ai'
 import { useInView } from 'react-intersection-observer'
 function Footer() {
     const [ref,inView] = useInView({threshold:0})
+    const [viewed,setViewed] = useState(false)
     const [error,setError]= useState('')
     const [loading,setLoading] = useState(false)
     const [message,setMessage]  = useState('')
@@ -41,13 +42,11 @@ function Footer() {
         }
         setLoading(false)
         return false
-        
-
     }
     return (
         <footer className='footer' id='contact'>
             <div ref={ref}>
-                {inView && <div >
+                { <div >
                     <div className='get-in-touch'>
                         <div className="form-div">
                             <h2>Get in Touch</h2>
@@ -85,7 +84,6 @@ function Footer() {
                                     {message && <p style={{color:'green'}}> &#10004; {message} </p>}
                                 </div>
                             </form> 
-                            
                         </div>
                         
                     </div>

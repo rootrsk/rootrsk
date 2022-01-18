@@ -1,5 +1,4 @@
 import React from 'react'
-import { saveAs } from 'file-saver';
 import { useInView } from 'react-intersection-observer'
 import About from './About'
 import Footer from './Footer'

@@ -231,6 +231,10 @@ body{
     right: 0px;
     width: 100%;
     z-index: 100;
+    padding: 0px;
+    margin: 0px;
+    // background: red;
+    // height: 50%;
     // background-color: red;
     border-bottom: 5px solid #ffffff;
     .sk-ani-con{
@@ -548,6 +552,7 @@ body{
         display: flex;
         flex-direction: column;
         bottom: 0px;
+        margin: 0px;
     }
     .bar{
         animation: goUpJava 2s;
@@ -667,7 +672,7 @@ body{
 }
 .react{
     .ss{
-        position: absolute;
+        // position: absolute;
         display: flex;
         flex-direction: column;
         bottom: 0px;
@@ -1373,3 +1378,199 @@ h2{
     height: 1px;
     background: #949494;
 }
+.mobile-navigation {
+    top: 0px;
+    width: 0px;
+    position: absolute;
+    background-color: #022235f3;
+    height: 100vh;
+    z-index: 101;
+    overflow: hidden;
+}
+.menu-icon{
+    display: none;
+}
+@media screen and (max-width: 680px) {
+    .mobile-navigation{
+        width: 0px;
+        overflow: hidden;
+        transition: width 1s;
+
+    }
+    .open{
+        width: 100%;
+    }
+    .nav-link{
+        display: none;
+    }
+    .menu-icon{
+        font-size: 50px;
+        margin-right: 10px;
+        color: #fff;
+        display: block;
+    }
+    .welcome-div{
+        font-size: 22px;
+        margin-top: 50px;
+        .welcome-note {
+            .hi {
+                font-size: 20px;
+                margin-right: 5px;
+            }
+            .name {
+                font-size: 32px;
+            }
+        }
+    }
+    
+    
+    .nav-link-mobile{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        li {
+            margin: 5px 20px;
+            list-style-type: none;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1.2rem;
+            position: relative;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            padding: 10px;
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+        li:hover{
+            // background-color: #012125;
+        }
+
+        li::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            transition: width 0.3s;
+            box-shadow: 0px -2px 15px #fff;
+
+        }
+
+        li:hover::after {
+            content: '';
+            width: 70%;
+            height: 3px;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            // background: white;
+        }
+    }
+    .welcome-div{
+
+    }
+    .skill-animation{
+        .bar{
+            width: 5px;
+        }
+        img{
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .project_page{
+        height: auto;
+    }
+    .markup_container {
+        flex-wrap: wrap;
+        .markup-div{
+            width: auto;
+
+        }
+    }
+    .about_page{
+        height: auto;
+        position: relative;
+        .cake{
+            position: relative;
+            top: 10px;
+        }
+        .about_upper {
+            img{
+                width: 100px;
+                position: absolute;
+                top: 90px;
+                right: 20px;
+            }
+            
+        }
+    }
+    
+    
+    // Bubble 
+    .bubble-container {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        transition: transform 2s;
+        cursor: pointer;
+
+
+    }
+    .bubble-icon {
+        font-size: 50px;
+        color: #fdfdfd;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, 50%);
+        // background: red;
+    }
+
+    .bubble {
+        border-radius: 50%;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+        height: 80px;
+        position: absolute;
+        width: 80px;
+        // background: blue;
+    }
+
+    .bubble-img {
+        border-radius: 50%;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3), inset 0px 10px 30px 5px rgb(255, 255, 255);
+        height: 200px;
+        position: absolute;
+        width: 200px;
+        display: none;
+        // background: blue;
+    }
+
+    .bubble:after {
+        background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+        border-radius: 50%;
+        box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+        content: "";
+        height: 60px;
+        left: 10px;
+        position: absolute;
+        width: 60px;
+    }
+}
+
+
+
+
+
+
+
+
