@@ -31,7 +31,7 @@ function Project() {
                         </ul>
                         <h4>Technology </h4>
                         <ul>
-   visit                         <li>Nodejs</li>
+                            <li>Nodejs</li>
                             <li>React</li>
                             <li>Mongodb</li>
                             <li>Razorpay</li>
@@ -54,7 +54,7 @@ function Project() {
                     <div className="project-details">
                         <h2>HomeAutomation -  Mobile & Web App</h2>
                         <div className='small-line'></div>
-                        <p>Fully functional web and mobile-based control home automation system for controlling various home appliances from anywhere.</p>
+                        <p>Fully functional web and mobile-based control home automation system for controlling various home appliances from anywhere.<a href="https://rootrsk-homeautomation.vercel.app/">Visit</a></p>
                         <h4>Features</h4>
                         <ul>
                             <li>Realtime room conditons (humidity,temperature,air-quality)</li>
