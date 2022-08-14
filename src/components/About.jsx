@@ -49,7 +49,7 @@ function About() {
             {inView && <div className='cake' >
                 <div>
                     <img  src="https://i.ibb.co/vcLSkbD/output-onlinegiftools-1.gif" alt="" />
-                    <p>On 2nd September</p>
+                    <p>On 2nd August</p>
                 </div>
             </div>}
             <div className="quote">

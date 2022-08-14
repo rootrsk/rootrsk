@@ -1632,6 +1632,7 @@ h2 {
 .btm-btn {
   position: absolute;
   bottom: 10px;
+  cursor: pointer;
 }
 
 @-webkit-keyframes imganimation {
